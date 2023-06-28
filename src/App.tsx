@@ -1,26 +1,45 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import { OutsideWrapperElement } from "./lib";
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
+    return (
+        <div
+            style={{
+                display: "flex",
+                flexDirection: "column",
+                width: "100%",
+                height: "100vh",
+                justifyContent: "center",
+                alignItems: "center",
+                rowGap: 10,
+                padding: "20px",
+            }}
         >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+            <div>Click outside here, and check the console</div>
+            <OutsideWrapperElement
+                onClickOutside={(
+                    e: React.MouseEvent<MouseEvent, MouseEvent>
+                ) => {
+                    const { clientX, clientY } = e;
+                    console.log({ clientX, clientY });
+                    console.log(e, "Element where clicked");
+                    alert("You click at outside input");
+                }}
+            >
+                <input
+                    type="text"
+                    style={{
+                        border: "1px solid #ddd",
+                        padding: "6px 8px 6px 8px",
+                        minWidth: "350px",
+                        borderRadius: "8px",
+                    }}
+                    placeholder="Type something here..."
+                />
+            </OutsideWrapperElement>
+            <div>Click outside here, and check the console</div>
+        </div>
+    );
 }
 
 export default App;
