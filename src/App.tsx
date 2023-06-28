@@ -13,8 +13,37 @@ function App() {
                 alignItems: "center",
                 rowGap: 10,
                 padding: "20px",
+                fontSize: "17px",
             }}
         >
+            <span
+                style={{
+                    fontSize: "50px",
+                    marginBottom: "10px",
+                }}
+            >
+                <b>react-click-outside-element</b>
+            </span>
+            <span
+                style={{
+                    backgroundColor: "green",
+                    padding: "8px",
+                    borderRadius: "8px",
+                    color: "white",
+                }}
+            >
+                {"<"} 10KB
+            </span>
+            <pre
+                style={{
+                    background: "#eee",
+                    padding: "8px",
+                    borderRadius: "8px",
+                    fontSize: "18px",
+                }}
+            >
+                <code>npm install react-click-outside-element</code>
+            </pre>
             <div>Click outside here, and check the console</div>
             <OutsideWrapperElement
                 onClickOutside={(
@@ -29,10 +58,11 @@ function App() {
                 <input
                     type="text"
                     style={{
-                        border: "1px solid #ddd",
-                        padding: "6px 8px 6px 8px",
+                        border: "1px solid #ccc",
+                        padding: "10px 12px 10px 12px",
                         minWidth: "350px",
                         borderRadius: "8px",
+                        fontSize: "16px",
                     }}
                     placeholder="Type something here..."
                 />

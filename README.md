@@ -9,6 +9,10 @@ If you need a component to detect when there is a click outside the component, y
 Run the following command:
 `npm install react-click-outside-element`
 
+## Demo
+
+![Example](https://i.imgflip.com/7qvpyo.gif)
+
 ## Example
 
 ```js
