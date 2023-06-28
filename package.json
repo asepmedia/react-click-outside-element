@@ -41,5 +41,15 @@
     },
     "devDependencies": {
         "babel-cli": "^6.26.0"
+    },
+    "main": "dist/index.js",
+    "module": "dist/index.js",
+    "files": [
+        "dist",
+        "README.md"
+    ],
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/asepmedia/react-click-outside-element.git"
     }
 }
