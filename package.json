@@ -1,6 +1,6 @@
 {
     "name": "react-click-outside-element",
-    "version": "0.1.25",
+    "version": "0.2.0",
     "author": "Asep Yayat (asepmedia)",
     "dependencies": {
         "@testing-library/jest-dom": "^5.16.5",
