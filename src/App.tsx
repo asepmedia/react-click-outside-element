@@ -1,5 +1,5 @@
 import React from "react";
-import { OutsideWrapperElement } from "./lib";
+import OutsideWrapperElement from "react-click-outside-element";
 
 function App() {
     return (

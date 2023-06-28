@@ -1,1 +1,3 @@
-export { default as OutsideWrapperElement } from "./components/index";
+import OutsideWrapperElement from "./components/index";
+
+export default OutsideWrapperElement;
