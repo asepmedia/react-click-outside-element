@@ -1,7 +1,12 @@
-import React from "react";
+import React, { useState } from "react";
 import OutsideWrapperElement from "./lib";
 
 function App() {
+    const [active, setActive] = useState(false);
+
+    const toggleActive = () => {
+        setActive((prev) => !prev);
+    };
     return (
         <div
             style={{

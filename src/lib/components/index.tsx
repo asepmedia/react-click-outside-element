@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import React, { useRef, useState } from "react";
 import { useOutsideAlerter } from "../hooks";
 
 /**
@@ -15,12 +15,21 @@ function OutsideWrapper(props: IOutsideWrapperProps) {
 
     // use ref for detect element
     const wrapperRef = useRef(null);
+    const [isClicked, setIsClicked] = useState(false);
+
+    const firstClicked = () => {
+        setIsClicked(true);
+    };
+    const lastClicked = () => {
+        setIsClicked(false);
+    };
 
     // use hooks outside and every change compare to current ref
     useOutsideAlerter(
         wrapperRef,
         (e: React.MouseEvent<MouseEvent, MouseEvent>) => {
-            if (onClickOutside) {
+            if (onClickOutside && isClicked) {
+                lastClicked();
                 onClickOutside(e);
             }
         }
@@ -28,7 +37,9 @@ function OutsideWrapper(props: IOutsideWrapperProps) {
 
     return (
         <>
-            <div ref={wrapperRef}>{children}</div>
+            <div ref={wrapperRef} onClick={firstClicked}>
+                {children}
+            </div>
         </>
     );
 }
